@@ -5,10 +5,7 @@ body {
     text-align: center;
 }
 
-.my-list-img {
-    height: 200px;
+.img {
     width: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    height: 200px;
 }

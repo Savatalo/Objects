@@ -29,13 +29,12 @@ const myList = [
   }
 ];
 
-for (let i = 0; i < myList.length; i++) {
-  let para = document.createElement("para");
-  let img = document.createElement("img");
-  para.className = "my-list-text";
-  img.className = "my-list-img";
-  para.innerHTML = myList[i].title;
-  img.src = myList[i].img;
-  document.body.appendChild(img);
-  document.body.appendChild(para);
+
+for (const content in myList) {
+  let i;
+  div.innerHTML += `
+  <img src="${myList[content].img}" class ="img">
+  <p class = "para">${myList[content].title}</p>
+  `
+  i++
 }
