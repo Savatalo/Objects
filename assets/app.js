@@ -1,39 +1,41 @@
-const para = document.getElementById("para");
-const para1 = document.getElementById("para1");
-const para2 = document.getElementById("para2");
-const img = document.getElementById('img');
-const img1 = document.getElementById('img1');
-const img2 = document.getElementById('img2');
+let newText = document.createElement("p");
+let newImg = document.createElement("img");
+let div = document.getElementById("div");
 
 const myList = [
- {
-    img: 'imgs/e200.jpg',
-    title: 'Mercedes E200'
- },
+  {
+    img: "imgs/e200.jpg",
+    title: "Mercedes E200"
+  },
 
- {
-    img: 'imgs/msc.jpg',
-    title: 'Michael Schumacher'
- },
+  {
+    img: "imgs/msc.jpg",
+    title: "Michael Schumacher"
+  },
 
- {
-    img: 'imgs/f2004.jpg',
-    title: 'F2004'
- }
+  {
+    img: "imgs/f2004.jpg",
+    title: "F2004"
+  },
+
+  {
+    img: "imgs/agera.jpg",
+    title: "Koenigsegg agera"
+  },
+
+  {
+   img: "imgs/rari.jpg",
+   title: "Ferrari 458"
+  }
 ];
 
-img.src = myList[0].img;
-para.innerHTML =  myList[0].title;
-img1.src = myList[1].img;
-para1.innerHTML = myList[1].title;
-img2.src = myList[2].img;
-para2.innerHTML = myList[2].title;
-
-
-
-
-
-
-
-
-
+for (let i = 0; i < myList.length; i++) {
+  let para = document.createElement("para");
+  let img = document.createElement("img");
+  para.className = "my-list-text";
+  img.className = "my-list-img";
+  para.innerHTML = myList[i].title;
+  img.src = myList[i].img;
+  document.body.appendChild(img);
+  document.body.appendChild(para);
+}
