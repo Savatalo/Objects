@@ -30,11 +30,9 @@ const myList = [
 ];
 
 
-for (const content in myList) {
-  let i;
+for (let content in myList) {
   div.innerHTML += `
   <img src="${myList[content].img}" class ="img">
   <p class = "para">${myList[content].title}</p>
   `
-  i++
 }
